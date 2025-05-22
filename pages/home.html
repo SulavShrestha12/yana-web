@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love Yana - Home</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-blue-50">
+    <div class="page-transition active"></div>
+    <div class="floating-hearts" id="floating-hearts"></div>
+    
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="home.html" class="text-2xl font-bold text-blue-600 handwriting">For Yana</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="home.html" class="nav-link text-blue-600 hover:text-blue-800">Home</a>
+                    <a href="memories.html" class="nav-link text-blue-600 hover:text-blue-800">Memories</a>
+                    <a href="gallery.html" class="nav-link text-blue-600 hover:text-blue-800">Gallery</a>
+                    <a href="letter.html" class="nav-link text-blue-600 hover:text-blue-800">Love Letter</a>
+                    <a href="distance.html" class="nav-link text-blue-600 hover:text-blue-800">Our Distance</a>
+                    <a href="music.html" class="nav-link text-blue-600 hover:text-blue-800">Our Song</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-blue-600"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4 shadow-lg">
+            <a href="home.html" class="block py-2 text-blue-600 hover:text-blue-800">Home</a>
+            <a href="memories.html" class="block py-2 text-blue-600 hover:text-blue-800">Memories</a>
+            <a href="gallery.html" class="block py-2 text-blue-600 hover:text-blue-800">Gallery</a>
+            <a href="letter.html" class="block py-2 text-blue-600 hover:text-blue-800">Love Letter</a>
+            <a href="distance.html" class="block py-2 text-blue-600 hover:text-blue-800">Our Distance</a>
+            <a href="music.html" class="block py-2 text-blue-600 hover:text-blue-800">Our Song</a>
+        </div>
+    </nav>
+
+    <section id="home-page" class="page min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-100 to-blue-200">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <h1 class="text-5xl md:text-6xl font-bold text-blue-800 mb-6 handwriting">My Dearest Yana</h1>
+            <p class="text-xl md:text-2xl text-blue-700 mb-8">The day our souls met: <span class="font-bold">November 4, 2022</span></p>
+            <div class="bg-white rounded-xl shadow-xl p-6 mb-10 max-w-2xl mx-auto">
+                <h2 class="text-2xl font-bold text-blue-700 mb-4">Our Time Together</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="bg-blue-100 p-4 rounded-lg"><div class="text-4xl font-bold text-blue-800" id="years">0</div><div class="text-blue-600">Years</div></div>
+                    <div class="bg-blue-100 p-4 rounded-lg"><div class="text-4xl font-bold text-blue-800" id="months">0</div><div class="text-blue-600">Months</div></div>
+                    <div class="bg-blue-100 p-4 rounded-lg"><div class="text-4xl font-bold text-blue-800" id="days">0</div><div class="text-blue-600">Days</div></div>
+                    <div class="bg-blue-100 p-4 rounded-lg"><div class="text-4xl font-bold text-blue-800" id="hours">0</div><div class="text-blue-600">Hours</div></div>
+                    <div class="bg-blue-100 p-4 rounded-lg"><div class="text-4xl font-bold text-blue-800" id="minutes">0</div><div class="text-blue-600">Minutes</div></div>
+                    <div class="bg-blue-100 p-4 rounded-lg"><div class="text-4xl font-bold text-blue-800" id="seconds">0</div><div class="text-blue-600">Seconds</div></div>
+                </div>
+            </div>
+            <div class="mt-8"><p class="text-blue-700 text-lg mb-4">Every moment with you is precious</p><div class="inline-block heartbeat"><i class="fas fa-heart text-red-500 text-4xl"></i></div></div>
+            <div class="mt-12 flex flex-wrap justify-center gap-4">
+                <a href="memories.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg">Our Memories <i class="fas fa-images ml-2"></i></a>
+                <a href="gallery.html" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg">Photo Gallery <i class="fas fa-camera ml-2"></i></a>
+                <a href="music.html" class="inline-block bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg">Our Song <i class="fas fa-music ml-2"></i></a>
+                 <a href="distance.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg">Distance<i class="fas fa-plane ml-2"></i></a>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close mobile menu when clicking a link
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        // The main page transition logic will handle navigation
+                    });
+                });
+            }
+
+            // Active Navigation Link
+            const currentPageFilename = window.location.pathname.split("/").pop() || "home.html";
+            document.querySelectorAll('nav .nav-link, #mobile-menu a').forEach(link => {
+                if (link.getAttribute('href') === currentPageFilename) {
+                    link.classList.add('font-bold'); // Makes the current page link bold
+                    if (link.matches('.nav-link:not(#mobile-menu a)')) {
+                         link.classList.add('nav-link-active'); // For persistent underline on desktop
+                    }
+                }
+            });
+
+            // Page Transition Logic
+            const transitionOverlay = document.querySelector('.page-transition');
+            if (transitionOverlay) {
+                // Entrance animation: (Overlay starts active, animate out)
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        transitionOverlay.style.transformOrigin = 'top';
+                        transitionOverlay.classList.remove('active');
+                    }, 50); // Small delay
+                });
+
+                // Exit animation for internal links
+                document.querySelectorAll('a[href]').forEach(link => {
+                    const url = link.getAttribute('href');
+                    if (url && !url.startsWith('#') && !url.startsWith('mailto:') && !url.startsWith('tel:') && !url.startsWith('javascript:')) {
+                        const linkUrl = new URL(link.href, window.location.origin);
+                        if (linkUrl.hostname === window.location.hostname) { // Internal link
+                            link.addEventListener('click', (e) => {
+                                e.preventDefault();
+                                transitionOverlay.style.transformOrigin = 'bottom';
+                                transitionOverlay.classList.add('active');
+                                transitionOverlay.addEventListener('transitionend', () => {
+                                    window.location.href = url;
+                                }, { once: true });
+                            });
+                        }
+                    }
+                });
+            }
+
+            // Floating Hearts
+            const heartsContainer = document.getElementById('floating-hearts');
+            if (heartsContainer) {
+                createFloatingHearts();
+            }
+
+            // --- START Page-Specific Scripts ---
+
+            // Countdown timer (for home.html)
+            if (document.getElementById('years')) {
+                updateCountdown();
+                setInterval(updateCountdown, 1000);
+            }
+
+            // Memory form (for memories.html)
+            const memoryForm = document.getElementById('memory-form');
+            if (memoryForm) {
+                memoryForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const titleInput = this.querySelector('input[type="text"]');
+                    const descriptionArea = this.querySelector('textarea');
+                    if (titleInput.value && descriptionArea.value) {
+                        alert('Memory saved! This would be saved to a database in a real application.');
+                        this.reset();
+                    } else {
+                        alert('Please fill in both fields');
+                    }
+                });
+            }
+
+            // Cloud creation (for distance.html)
+            if (document.querySelector('.plane-container')) {
+                createDynamicClouds();
+            }
+
+            // Music Player (for music.html)
+            if (document.getElementById('music-page')) { // Check if on music page
+                 musicPlayer.init();
+            }
+
+            // --- END Page-Specific Scripts ---
+        });
+
+        // Function definitions (can be outside DOMContentLoaded if preferred)
+
+        function updateCountdown() {
+            const startDate = new Date('November 4, 2022 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = now - startDate;
+            const elExists = (id) => document.getElementById(id);
+
+            if(elExists('years')) document.getElementById('years').innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
+            if(elExists('months')) document.getElementById('months').innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
+            if(elExists('days')) document.getElementById('days').innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+            if(elExists('hours')) document.getElementById('hours').innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            if(elExists('minutes')) document.getElementById('minutes').innerHTML = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            if(elExists('seconds')) document.getElementById('seconds').innerHTML = Math.floor((distance % (1000 * 60)) / 1000);
+        }
+
+        function createFloatingHearts() {
+            const container = document.getElementById('floating-hearts');
+            if (!container) return;
+            const heartCount = 20;
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '<i class="fas fa-heart"></i>';
+                const left = Math.random() * 100;
+                const top = Math.random() * 100 + 100;
+                const size = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                const duration = Math.random() * 5 + 5;
+                heart.style.left = `${left}%`;
+                heart.style.top = `${top}%`;
+                heart.style.fontSize = `${size}px`;
+                heart.style.animationDelay = `${delay}s`;
+                heart.style.animationDuration = `${duration}s`;
+                container.appendChild(heart);
+            }
+        }
+
+        function createDynamicClouds() {
+            const container = document.querySelector('.plane-container');
+            if (!container) return;
+            // Clear existing example clouds if any, or ensure they are not duplicated
+            const existingClouds = container.querySelectorAll('.cloud.dynamic');
+            existingClouds.forEach(c => c.remove());
+
+            for (let i = 0; i < 10; i++) {
+                const cloud = document.createElement('div');
+                cloud.className = 'cloud dynamic'; // Add dynamic class to distinguish if needed
+                const size = Math.random() * 30 + 30;
+                const left = Math.random() * 100;
+                const top = Math.random() * 50 + 10;
+                const opacity = Math.random() * 0.5 + 0.3;
+                cloud.style.width = `${size}px`;
+                cloud.style.height = `${size / 2}px`;
+                cloud.style.left = `${left}%`;
+                cloud.style.top = `${top}%`;
+                cloud.style.opacity = opacity;
+                cloud.style.position = 'absolute'; // Ensure these are set if not in CSS for .cloud
+                cloud.style.background = 'white';
+                cloud.style.borderRadius = '50%';
+                container.appendChild(cloud);
+            }
+        }
+
+        const musicPlayer = {
+            songs: [ /* ... same song data as before ... */
+                { title: "Perfect", artist: "Ed Sheeran", duration: "3:30", cover: "https://i.scdn.co/image/ab67616d00001e02a4a0a8a6f0a9b0a8a6f0a9b0", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+                { title: "All of Me", artist: "John Legend", duration: "4:29", cover: "https://i.scdn.co/image/ab67616d00001e02a4a0a8a6f0a9b0a8a6f0a9b0", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" }, // Replace with actual URLs
+                { title: "A Thousand Years", artist: "Christina Perri", duration: "4:45", cover: "https://i.scdn.co/image/ab67616d00001e02a4a0a8a6f0a9b0a8a6f0a9b0", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" } // Replace with actual URLs
+            ],
+            currentSongIndex: 0,
+            isPlaying: false,
+            audio: new Audio(),
+            init: function() {
+                if (!document.getElementById('play-btn')) return; // Don't init if elements not present
+
+                this.audio.addEventListener('timeupdate', this.updateProgress.bind(this));
+                this.audio.addEventListener('ended', this.nextSong.bind(this));
+                this.audio.addEventListener('loadedmetadata', () => { // Update duration once metadata loaded
+                    const song = this.songs[this.currentSongIndex];
+                    const minutes = Math.floor(this.audio.duration / 60);
+                    const seconds = Math.floor(this.audio.duration % 60);
+                    document.getElementById('duration').textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+                    // If you stored duration in song object and it's just a display string, use that.
+                    // If song.duration is the actual seconds, then this update is good.
+                });
+                
+                document.getElementById('play-btn').addEventListener('click', this.togglePlay.bind(this));
+                document.getElementById('prev-btn').addEventListener('click', this.prevSong.bind(this));
+                document.getElementById('next-btn').addEventListener('click', this.nextSong.bind(this));
+                document.getElementById('progress-container').addEventListener('click', (e) => this.setProgress(e)); // Pass event
+                
+                this.loadSong(this.currentSongIndex);
+            },
+            loadSong: function(index) {
+                this.currentSongIndex = index;
+                const song = this.songs[index];
+                document.querySelector('.music-player h3').textContent = `${song.title} - ${song.artist}`;
+                document.querySelector('.music-player img').src = song.cover;
+                document.getElementById('current-time').textContent = '0:00';
+                document.getElementById('progress').style.width = '0%';
+                // For actual playback, set the audio source:
+                this.audio.src = song.url; // Make sure song objects have a 'url' property for the mp3
+                // If you want the song to load but not play immediately:
+                // this.audio.load(); 
+                if (this.isPlaying) { // If it was playing, continue playing new song
+                  // this.audio.play(); // This might be too aggressive or cause issues if called rapidly
+                }
+            },
+            togglePlay: function() {
+                const playIcon = document.getElementById('play-icon');
+                if (this.audio.paused || this.audio.ended) {
+                    this.audio.play();
+                    playIcon.classList.remove('fa-play');
+                    playIcon.classList.add('fa-pause');
+                    this.isPlaying = true;
+                } else {
+                    this.audio.pause();
+                    playIcon.classList.remove('fa-pause');
+                    playIcon.classList.add('fa-play');
+                    this.isPlaying = false;
+                }
+            },
+            updateProgress: function() {
+                const progressPercent = (this.audio.currentTime / this.audio.duration) * 100;
+                document.getElementById('progress').style.width = `${progressPercent}%`;
+                const minutes = Math.floor(this.audio.currentTime / 60);
+                const seconds = Math.floor(this.audio.currentTime % 60);
+                document.getElementById('current-time').textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+            },
+            setProgress: function(e) {
+                const progressContainer = document.getElementById('progress-container');
+                const width = progressContainer.clientWidth;
+                const clickX = e.offsetX;
+                if (this.audio.duration) { // Check if duration is available
+                    this.audio.currentTime = (clickX / width) * this.audio.duration;
+                }
+            },
+            nextSong: function() {
+                this.currentSongIndex = (this.currentSongIndex + 1) % this.songs.length;
+                this.loadSong(this.currentSongIndex);
+                if (this.isPlaying) this.audio.play();
+            },
+            prevSong: function() {
+                this.currentSongIndex = (this.currentSongIndex - 1 + this.songs.length) % this.songs.length;
+                this.loadSong(this.currentSongIndex);
+                if (this.isPlaying) this.audio.play();
+            }
+        };
+    </script>
+
+    <footer class="bg-blue-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6 handwriting">To My Yana</h2>
+            <p class="text-blue-200 mb-8 max-w-2xl mx-auto">No matter where life takes us, no matter how many miles separate us, my love for you will only grow stronger with each passing day.</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-2xl text-blue-200 hover:text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-2xl text-blue-200 hover:text-white"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-2xl text-blue-200 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="border-t border-blue-700 pt-8"><p class="text-blue-300">Made with <i class="fas fa-heart text-red-400"></i> for the most amazing woman in the world</p></div>
+        </div>
+    </footer>
+    </body>
+</html>
